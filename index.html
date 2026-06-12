@@ -4,29 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>cards Toggle</title>
+    <title>Cards Toggle</title>
 </head>
 <body>
- <div class="card" id="card1"> 
-<img src="https://toptripadventure.com.br/wp-content/uploads/2020/01/pontaGrossa.jpg" alt="">
-<h2>Buraco do padre</h2>
-<p>Um exelente ponto turistico em Ponta Grossa</p>
- </div>   
- <div class="card desligar"> 
-<img src="https://toptripadventure.com.br/wp-content/uploads/2020/01/pontaGrossa.jpg" alt="">
-<h2>Cataratas do iguaçu</h2>
-<p>Um exelente ponto turistico em Ponta Grossa</p>
- </div>  
- <button id="botao">alternar</button>
-<script>
-cartao1 = document.getElementbyid("card1");
-cartao2 = document.getElementbyid("card2");
-botao = document.getElementbyid("botao");
 
-botao.addEventlistener("clik", (
-    cartao1.classlist.toggle("delisgar");
-    cartao2.classlist.toggle("delisgar");
-))
-</script>
+    <center> 
+
+    <h2>lugares turisticos</h2>
+    <div class="card" id="card1">
+        <img src="https://toptripadventure.com.br/wp-content/uploads/2020/01/pontaGrossa.jpg">
+        <h2>Buraco do padre</h2>
+        <p>Um excelente ponto turistico em Ponta Grossa</p>
+
+    </div>
+     <div class="card desligar" id="card2">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/ed/a5/17/foz-do-iguacu.jpg?w=900&h=500&s=1"
+        <h2>Cataratas do Iguaçu</h2>
+        <p>Um excelente ponto turistico em Ponta Grossa</p>
+
+    </div>
+    
+    </center>
+
+    <script>
+        cartao1 = document.getElementById("card1");
+        cartao2 = document.getElementById("card2");
+        
+
+        cartao1.addEventListener("mouseover", ()=>{
+            cartao1.classList.toggle("desligar");
+            cartao2.classList.toggle("desligar");
+        })
+        cartao2.addEventListener("mouseover", ()=>{
+            cartao1.classList.toggle("desligar");
+            cartao2.classList.toggle("desligar");
+        })
+
+        
+    </script>
 </body>
 </html>
